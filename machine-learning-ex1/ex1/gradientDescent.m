@@ -18,17 +18,13 @@ for iter = 1:num_iters
     %
     
     h_x = X * theta;
-    delta = transpose(h_x - y) * X;
-    theta = theta - (alpha / m) .* delta';
+    delta = transpose(h_x - y) * X; % This transpose is to convert 97x1 matrix 
+                                    % into 1x97 for further multiplication
     
-    disp(theta);
+    theta = theta - (alpha / m) .* delta'; % This transpose is to convert 1x2 matrix into 2x1 matrix
     
-    
-
-
-
-
-
+    % Finally we need a 2x1 matrix
+    % This solution should be generic
     % ============================================================
 
     % Save the cost J in every iteration    
