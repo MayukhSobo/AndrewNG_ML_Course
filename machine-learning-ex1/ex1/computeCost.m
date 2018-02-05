@@ -14,9 +14,10 @@ J = 0;
 %               You should set J to the cost.
 
 
-
-
-
+% X is already transposed...Hence satisties y = X * theta
+y_predict = X * theta;
+residuals = (y_predict - y) .^ 2;  % Squared error to remove -ve sign
+error = sum(residuals);
+J = (1 / (2 * m)) * error;
 % =========================================================================
-
 end
