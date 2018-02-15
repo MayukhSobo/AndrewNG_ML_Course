@@ -107,7 +107,7 @@ fprintf('theta: \n');
 fprintf(' %f \n', theta);
 fprintf('Expected theta (approx):\n');
 fprintf(' -25.161\n 0.206\n 0.201\n');
-
+pause
 % Plot Boundary
 plotDecisionBoundary(theta, X, y);
 
@@ -122,7 +122,6 @@ legend('Admitted', 'Not admitted')
 hold off;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
 
 %% ============== Part 4: Predict and Accuracies ==============
 %  After learning the parameters, you'll like to use it to predict the outcomes

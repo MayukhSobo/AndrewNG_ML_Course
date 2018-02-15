@@ -13,14 +13,14 @@ function plotData(X, y)
     %
     
     % select the 0 label index
-    label_0 = find(y == 0);
+%    label_0 = find(y == 0);
     % select the 1 label index
-    label_1 = find(y == 1);
+ %   label_1 = find(y == 1);
     
     % Plotting for labels 0
-    plot(X(label_0, 1), X(label_0, 2), 'ko', 'LineWidth', 1, 'MarkerFaceColor', 'yellow', 'MarkerSize', 8);
+    plot(X(y == 0, 1), X(y == 0, 2), 'ko', 'LineWidth', 1, 'MarkerFaceColor', 'yellow', 'MarkerSize', 8);
     % Plotting for the labels 1
-    plot(X(label_1, 1), X(label_1, 2), 'k+', 'LineWidth', 3, 'MarkerSize', 10);
+    plot(X(y == 1, 1), X(y == 1, 2), 'k+', 'LineWidth', 3, 'MarkerSize', 10);
     % =========================================================================
     hold off;
 end
