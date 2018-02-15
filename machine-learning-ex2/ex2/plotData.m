@@ -22,8 +22,5 @@ function plotData(X, y)
     % Plotting for the labels 1
     plot(X(label_1, 1), X(label_1, 2), 'k+', 'LineWidth', 3, 'MarkerSize', 10);
     % =========================================================================
-
-
-
     hold off;
 end

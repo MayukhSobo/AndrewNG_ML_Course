@@ -63,6 +63,8 @@ X = [ones(m, 1) X];
 % Initialize fitting parameters
 initial_theta = zeros(n + 1, 1);
 
+pause
+
 % Compute and display initial cost and gradient
 [cost, grad] = costFunction(initial_theta, X, y);
 
