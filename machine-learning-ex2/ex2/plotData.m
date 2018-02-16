@@ -20,7 +20,7 @@ function plotData(X, y)
     % Plotting for labels 0
     plot(X(y == 0, 1), X(y == 0, 2), 'ko', 'LineWidth', 1, 'MarkerFaceColor', 'yellow', 'MarkerSize', 8);
     % Plotting for the labels 1
-    plot(X(y == 1, 1), X(y == 1, 2), 'k+', 'LineWidth', 3, 'MarkerSize', 10);
+    plot(X(y == 1, 1), X(y == 1, 2), 'k+', 'LineWidth', 3, 'MarkerSize', 6);
     % =========================================================================
     hold off;
 end

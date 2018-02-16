@@ -56,7 +56,6 @@ hold off;
 % Note that mapFeature also adds a column of ones for us, so the intercept
 % term is handled
 X = mapFeature(X(:,1), X(:,2));
-
 % Initialize fitting parameters
 initial_theta = zeros(size(X, 2), 1);
 
@@ -114,7 +113,7 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 
 % Optimize
 [theta, J, exit_flag] = ...
-	fminunc(@(t)(costFunctionReg(t, X, y, lambda)), initial_theta, options);
+fminunc(@(t)(costFunctionReg(t, X, y, lambda)), initial_theta, options);
 
 % Plot Boundary
 plotDecisionBoundary(theta, X, y);
