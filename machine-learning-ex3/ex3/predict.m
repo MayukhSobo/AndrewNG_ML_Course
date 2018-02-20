@@ -4,12 +4,22 @@ function p = predict(Theta1, Theta2, X)
 %   trained weights of a neural network (Theta1, Theta2)
 
 % Useful values
+
+% num_labels = size(Theta2, 1);
+
+% For layer 1 to 2 
 m = size(X, 1);
-num_labels = size(Theta2, 1);
+X = [ones(m, 1) X];
+layer_1_2_weights = sigmoid(Theta1 * X');
 
-% You need to return the following variables correctly 
-p = zeros(size(X, 1), 1);
-
+% For layer 2 to 3 (output layer)
+m = size(layer_1_2_weights, 2);
+X = [ones(1, m); layer_1_2_weights];
+layer_2_3_weights = sigmoid(Theta2 * X);
+%disp(max(layer_2_3_weights))
+[~, p] = max(layer_2_3_weights);
+p = transpose(p);
+%pause
 % ====================== YOUR CODE HERE ======================
 % Instructions: Complete the following code to make predictions using
 %               your learned neural network. You should set p to a 
